@@ -1,0 +1,77 @@
+/* CSS */
+* {margin: 0; padding: 0; box-sizing: border-box; }
+h3
+{
+	color: black;
+	font-size: 55px;
+	text-align: center;
+	font-family: 'New Rocker', cursive;
+	cursor: pointer;
+	display: none;
+	width: 175px;
+	margin: 0 auto;
+}
+body {background-image: url('../img/bg-yellow.png');}
+h1 {font-family: 'New Rocker', cursive; color: white; font-size: 65px; text-align: center; margin: 35px;}
+nav ul {text-align: center; }
+nav ul li a, nav ul li {display: inline-block;}
+img {display: block; margin: 20px auto; max-width: 100%}
+nav ul li a 
+{
+	padding: 20px;
+	font-size: 50px;
+	color: black;
+	font-family: 'New Rocker', cursive;
+	text-decoration: none;
+}
+div.main
+{
+	width: 75%;
+	background-color: black;
+	margin: 0 auto;
+	border: 1px solid black;
+}
+p
+{
+	font-size: 35px;
+	color: white;
+	padding: 20px;
+	margin: 10px;
+	line-height: 45px;
+}
+
+@media (max-width: 1200px)
+{
+	div.main {width: 95%;}
+	p{font-size: 25px; line-height: 35px;}
+}
+
+@media (max-width: 900px)
+{
+	div.main {width: 100%; padding: 0;}
+	p{margin-left: 2px; margin-right: 2px; text-align: justify; line-height: 30px;}
+	nav ul li a {font-size: 35px; padding-left: 5px; padding-right: 5px;}
+}
+@media (max-width: 650px)
+{
+	h3 {display: block;}
+	nav {position: relative;}
+	nav ul 
+	{
+		padding: 20px;
+		display: none; 
+		background-color: black; 
+		border: 2px solid grey; 
+		width: 300px;
+		margin: 10px auto;
+		position: absolute;
+		top: 50px;
+		left: 100px;
+	}
+	
+	nav ul li {display: block;}
+	nav ul li a {padding: 10px; transition: color 500ms; color: white;}
+	h3:hover + ul {display: block;}
+	ul:hover {display: block;}
+	nav ul li a:hover {color: grey;}
+}
