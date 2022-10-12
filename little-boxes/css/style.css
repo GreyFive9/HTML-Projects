@@ -1,0 +1,152 @@
+/* 
+@author Damen Marcus
+Version 1.0
+*/
+
+
+
+/* selecting all*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/* This is creating a background layer (my first layer)*/
+.canvas {
+  background: #000000;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/*Im creating a circle on top of my background layer (my canvas)*/
+.circle {
+  width: 70vmin;
+  height: 70vmin;
+  background: #27D2EB;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/*Im creating the ghosts body and chaning the shape with border radius*/
+.ghost {
+  position: relative;
+  border: 0.5vmin solid black;
+  width: 30vmin;
+  height: 30vmin;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom: 0;
+  box-sizing: border-box;
+  background: #880AC2;
+}
+/*Creating my legs*/
+.legs {
+  display: flex;
+  width: 30vmin;
+}
+/*changing the shape of the legs with circles*/
+.legs div {
+  width: 7.5vmin;
+  height: 6vmin;
+  border: 0.5vmin solid black;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top: 0;
+  background: #880AC2;
+}
+/*making a heart*/
+.heart {
+  position: relative;
+  width: 5vmin;
+  height: 5vmin;
+  background-color: #FF3737;
+  transform: translate(22vmin, 6vmin) rotate(25deg) scale(0.5);
+}
+/* creating a pseudo element*/
+.heart:before {
+  position: absolute;
+  bottom: 0px;
+  left: -2.5vmin;
+  width: 5vmin;
+  height: 5vmin;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #FF3737;
+}
+/* continuing pseudo element*/
+.heart:after {
+  position: absolute;
+  top: -2.5vmin;
+  right: 0px;
+  width: 5vmin;
+  height: 5vmin;
+  content: '';
+   
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+ 
+  background-color: #FF3737;
+}
+/* creating eyes*/
+.eyes {
+  position: absolute;
+  width: 5vmin;
+  height: 5vmin;
+  background: #000;
+  border-radius: 50%;
+  top: 13vmin;
+  left: 5vmin;
+  box-shadow: 14vmin 0;
+}
+/* creating a pseudo element*/
+.eyes:before{
+  content: "";
+  position: absolute;
+  background: white;
+  width: 2.5vmin;
+  height: 2.5vmin;
+  border-radius: 50%;
+  left: 2vmin;
+  box-shadow: 14vmin 0 white;
+}
+/* creating a mouth with border radius*/
+.mouth {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid black;
+  top: 18vmin;
+  left: 14vmin;
+}
+/* creating the hands*/
+.left-hand, .right-hand {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 0.5vmin solid black;
+}
+/* transforming my hands*/
+.left-hand {
+  top: 22vmin;
+  left: 6vmin;
+  transform: rotate(-45deg)
+}
+/* transforming my hands*/
+.right-hand{
+  top: 22vmin;
+  left: 18vmin;
+  transform: rotate(45deg)
+}
+
+    

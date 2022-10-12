@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Happy Birthday Program</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+        let text;
+        let person = prompt("Whats your name?", "..........");
+        let age = prompt("Whats your age?", "..........");
+        let month = prompt("What month were you born in?", "..........");
+        
+        text = "Hello " + person + "," + " " + "you are" + " " + age + " " + "years old," + " "
+        + "and you were born in" + " " + month + ".";
+  
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

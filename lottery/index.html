@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lottery Numbers</title>
+        <style>
+            body {
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to my lottery numbers generator!</h1>
+        <h3 id="cont"></h3>
+        <h3 id="result"></h3>
+
+        <!-- button to generate the numbers again -->
+        <button id="again">Generate Again</button>
+        
+
+        <!-- <audio id="myaud">
+            <source src="music.mp3" type="audio/mpeg">
+        </audio> -->
+
+        <script>
+            //function for generating numbers again
+            //given code
+            function generateNum() {
+                let numArray = [];
+                for (let i = 0; i < userNum; i++) {
+                    numArray[i] = Math.floor(Math.random() * (99 - 1 + 1)) + 1;
+                    if (numArray[i] < 10) {
+                        numArray[i] = "0" + numArray[i];
+                    }
+                    if (i == 0) {
+                        content.innerHTML = "You're random " + userNum + " numbers are: ";
+                        result.innerHTML = numArray[i];
+                    } else {
+                        content.innerHTML = "You're random " + userNum + " numbers are: ";
+                        result.innerHTML += "-" + numArray[i];
+                    }
+                }
+            }
+            //given code
+            let userNum = prompt("Please Enter Amount Of Random Numbers ");
+            let content = document.getElementById("cont");
+            let result = document.getElementById("result");
+            let numArray = [];
+            for (let i = 0; i < userNum; i++) {
+                numArray[i] = Math.floor(Math.random() * (99 - 1 + 1)) + 1;
+                if (numArray[i] < 10) {
+                    numArray[i] = "0" + numArray[i];
+                }
+                if (i == 0) {
+                    content.innerHTML = "You're random " + userNum + " numbers are: ";
+                    result.innerHTML = numArray[i];
+                } else {
+                    content.innerHTML = "You're random " + userNum + " numbers are: ";
+                    result.innerHTML += "-" + numArray[i];
+                }
+            }
+
+            //audio element
+            var aud = new Audio('mouseClick.mp3');
+            //plays the audio
+            aud.play();
+
+            //attaching event listener to the again button
+            let b = document.getElementById("again");
+            //invoking the function when button is clicked
+            b.addEventListener("click", generateNum);
+        </script>
+    </body>
+</html>
